@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Default menu style */
+        ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        /* Hamburger icon */
+        #menu-icon {
+            font-size: 30px;
+            cursor: pointer;
+            display: none;
+            user-select: none;
+        }
+
+        @media (max-width:500px) {
+            
+            /* Hide name only */
+           
+
+            /* Hide list on small screens */
+            ul {
+                display: none;
+                flex-direction: column;
+            }
+
+            /* Show hamburger icon */
+            #menu-icon {
+                display: block;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- Hamburger Icon -->
+    <div id="menu-icon">☰</div>
+
+    <!-- Navigation List -->
+    <ul id="menu">
+        <li id="name">Hello</li>
+        <li>Baby</li>
+        <li>Contact</li>
+    </ul>
+
+    <script>
+        const icon = document.getElementById("menu-icon");
+        const menu = document.getElementById("menu");
+
+        icon.addEventListener("click", () => {
+            // Toggle display on click
+            if (menu.style.display === "flex") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "flex";
+            }
+        });
+    </script>
+
+</body>
+</html>

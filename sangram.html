@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #line {
+            display: none;
+            list-style: none;
+            
+        }
+
+        #line p {
+            display: block;
+            
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="name" onclick="Open()">=</h1>
+
+    <li id="line">
+        <p>Home</p>
+        <p>About</p>
+        <p>Contact</p>
+    </li>
+
+    <script>
+        function Open() {
+            const line = document.getElementById("line");
+
+            if (line.style.display === 'block') {
+                line.style.display = 'none';   
+            } else {
+                line.style.display = 'block'; 
+            }
+        }
+    </script>
+
+</body>
+</html>
